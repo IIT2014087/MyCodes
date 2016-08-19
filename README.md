@@ -1,2 +1,1 @@
-# MyCodes
-Problems&amp;Solutions
+this is a simple repositary consisting of problems and their solutions .
