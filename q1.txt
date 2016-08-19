@@ -1,0 +1,54 @@
+Consider a n×n size board, wherein every cell has a number written on it. The rows and columns are cyclic. So you can slide any row/column any number of blocks or any number of times. As an example in the board given below, we slide the middle row one block each repeatedly, and the results are given in the following figures (emailed).
+
+A unit move in this game is sliding any 1 row (or 1 one column) any number of times. So the motions made above is one single move of the game. Given a source configuration and a goal configuration, print the moves that result in the goal configuration from a source configuration using Breadth First Search. Moving rows is preferred to moving columns (primary criterion), an earlier row/column is preferred to a later one (secondary criterion), sliding lesser rightward/downward is preferred to sliding more (tertiary criterion).
+
+The first line of input is the number of test cases. For every test case, the first line of input is n, the size of the game. The next n lines with n integers each is the source configuration. The next n lines with n integers each is the goal configuration.
+
+The output is variable number of lines, each line indicating the board configuration of a move printed in a row major format. 
+
+
+test cases
+I/P
+3
+3
+6 88 79 
+92 48 94 
+42 99 84 
+42 99 79 
+6 88 94 
+92 48 84 
+5
+96 22 22 54 13 
+54 82 72 30 11 
+4 83 16 40 38 
+20 85 32 54 19 
+0 38 12 90 64 
+96 38 22 54 13 
+54 22 72 30 11 
+4 82 16 40 38 
+20 83 32 54 19 
+0 85 12 90 64 
+6
+3 5 3 33 88 43 
+95 59 28 92 45 42 
+3 16 79 23 18 44 
+73 53 86 65 23 6 
+10 15 29 75 50 41 
+85 11 52 89 40 22 
+3 5 3 33 88 73 
+95 59 28 92 45 41 
+3 16 79 23 18 22 
+53 86 65 23 6 43 
+10 15 29 75 50 42 
+85 11 52 89 40 44
+
+
+O/P
+6 88 79 92 48 94 42 99 84 
+42 88 79 6 48 94 92 99 84 
+42 99 79 6 88 94 92 48 84 
+96 22 22 54 13 54 82 72 30 11 4 83 16 40 38 20 85 32 54 19 0 38 12 90 64 
+96 38 22 54 13 54 22 72 30 11 4 82 16 40 38 20 83 32 54 19 0 85 12 90 64 
+3 5 3 33 88 43 95 59 28 92 45 42 3 16 79 23 18 44 73 53 86 65 23 6 10 15 29 75 50 41 85 11 52 89 40 22 
+3 5 3 33 88 43 95 59 28 92 45 42 3 16 79 23 18 44 53 86 65 23 6 73 10 15 29 75 50 41 85 11 52 89 40 22 
+3 5 3 33 88 73 95 59 28 92 45 41 3 16 79 23 18 22 53 86 65 23 6 43 10 15 29 75 50 42 85 11 52 89 40 44
